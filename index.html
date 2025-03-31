@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teo Abalo - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 120px;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            color: #e74c3c;
+        }
+        section {
+            padding: 5rem 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #home {
+            margin-top: 180px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        .about-text {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .services-grid, .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .service-item, .portfolio-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #e74c3c;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #c0392b;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            nav { top: 100px; }
+            nav a { margin: 0 0.8rem; font-size: 1rem; }
+            #home { margin-top: 160px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teo Abalo</h1>
+        <p>Graphic & Website Developer at Exinet Media</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>About Me</h2>
+        <p class="about-text">
+            Hello! I’m Teo Abalo, a passionate graphic and website developer currently employed at Exinet Media. 
+            I’m also a student of ICT at St. Margaret College Makerere, where I honed my skills in design and development. 
+            I specialize in creating visually stunning graphics and user-friendly websites that leave a lasting impression.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Graphic Design</h3>
+                <p>From logos to banners, I craft eye-catching designs tailored to your brand.</p>
+            </div>
+            <div class="service-item">
+                <h3>Website Development</h3>
+                <p>Building responsive, modern websites with seamless functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1545235617-9465d6d9db9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Project 1">
+                <p>Graphic Design - Brand Identity</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1558655146-d09347e92266?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Project 2">
+                <p>Website - E-commerce Platform</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Project 3">
+                <p>Website - Portfolio Site</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Email: teoabalo@example.com | Social: @TeoAbalo</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Teo Abalo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
